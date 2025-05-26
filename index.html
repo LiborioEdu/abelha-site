@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
 </head>
 <body>
     <header class="active">
@@ -23,7 +24,7 @@
             <a href="#">Pesquisa</a>
             <a href="#">Espécies</a>
             <a href="#">Login</a>
-            <a href="#">Perfil</a>
+            <a href="#">Dashboard</a>
         </nav>
     </header>
 
@@ -40,15 +41,15 @@
             <p><span>1.</span> Tire uma foto da abelha.</p>
             <p><span>2.</span> Envie aqui e aguarde a análise.</p>
             <p><span>3.</span> Receba informações sobre a espécie e curiosidades!</p>
-            <div class="btn-sci">
+            <!-- <section class="btn-sci">
                 <a href="#" class="btn"><i class='bx bx-search-alt-2'></i> Pesquise aqui!</a>
-            </div>
+            </section> -->
         </div>
 
         <div class="home-img">
             <div class="img-box">
                 <div class="img-item">
-                    <model-viewer class="bee-model" src="imagens\flying_bee.glb" id="bee-model" auto-rotate camera-controls ar shadow-intensity="1" style="width: 400px; height: 400px;" ></model-viewer></model-viewer>
+                    <model-viewer class="bee-model" src="imagens/flying_bee.glb" id="bee-model" auto-rotate camera-controls ar shadow-intensity="1" style="width: 400px; height: 400px;" ></model-viewer></model-viewer>
                 </div>
             </div>
         </div>
@@ -59,40 +60,40 @@
 
     <section class="pesquisa">
         <div class="barra-lateral">
-            <ol reversed></ol>
+            <ol></ol>
         </div>
+        
         <div class="container">
-            <nav class="nav_box">
+            <div class="nav_box">
                 <button class="historico">HISTORICO</button>
-            </nav>
+            </div>
 
             <main>
             <div class="droparea">
                 <i class="far fa-images"></i>
                 <p>Arraste a imagem até aqui!</p>
-                <p><small>No maximo 20 imagens</small></p>
 
                 <ul class="nomes-imagens"></ul>
             </div>
             </main>
 
+            
             <button class="enviar-imagem">Enviar</button>
-
-            <ol class="listaEspecies"></ol>
-
+            
+            <ol class="listaEspecies"></ol>    
         </div>
     </section>
 
     <section class="especies">
     <div>
-        <h1>Abelhas Nativas do Brasil</h1>
+        <h1>Abelhas Nativas do Piauí</h1>
         <p>Conheça cinco espécies importantes para o meio ambiente</p>
     </div>
 
     <div class="container">
         <div class="caixa">
             <div class="caixa-img">
-                <img src="img\tiuba.jpg" alt="Abelha Tínia">
+                <img src="img/tiuba.jpg" alt="Abelha Tínia">
             </div>
             <div class="caixa-content">
                 <h2>🐝 Tiúba</h2>
@@ -166,47 +167,44 @@
     </section>
 
     <section class="login">
-          <!-- Container Login -->
-    <div class="container-login">
-        <h2>Login</h2>
-        <form id="form-login">
-        <div class="campo">
-            <label for="email-login">E-mail:</label>
-            <input type="email" id="email-login" required />
+        <div class="container-login">
+            <h2>Login</h2>
+            <form id="form-login">
+                <div class="campo">
+                    <label for="email-login">E-mail:</label>
+                    <input type="email" id="email-login" required />
+                </div>
+                <div class="campo">
+                    <label for="senha-login">Senha:</label>
+                    <input type="password" id="senha-login" required />
+                </div>
+                <button id="btn-login">Entrar</button>
+            </form>
+            <p class="link-cadastro">Não tem conta? 
+                <a href="javascript:void(0)" id="btn-cadastro-link">Cadastre-se</a>
+            </p>
+            
         </div>
-        <div class="campo">
-            <label for="senha-login">Senha:</label>
-            <input type="password" id="senha-login" required />
-        </div>
-        <button id="btn-login">Entrar</button>
-        </form>
-        <p class="link-cadastro">Não tem conta? <a href="#">Cadastre-se</a></p>
-    </div>
 
-    <!-- Container Cadastro -->
         <div class="container-cadastro" style="display: none;">
             <h2>Cadastro</h2>
             <form id="form-cadastro">
-            <div class="campo">
-                <label for="nome-cadastro">Nome:</label>
-                <input type="text" id="nome-cadastro" required />
-            </div>
-            <div class="campo">
-                <label for="email-cadastro">E-mail:</label>
-                <input type="email" id="email-cadastro" required />
-            </div>
-            <div class="campo">
-                <label for="senha-cadastro">Senha:</label>
-                <input type="password" id="senha-cadastro" required />
-            </div>
-            <button id="btn-cadastrar">Cadastrar</button>
+                <div class="campo">
+                    <label for="nome-cadastro">Nome:</label>
+                    <input type="text" id="nome-cadastro" required />
+                </div>
+                <div class="campo">
+                    <label for="email-cadastro">E-mail:</label>
+                    <input type="email" id="email-cadastro" required />
+                </div>
+                <div class="campo">
+                    <label for="senha-cadastro">Senha:</label>
+                    <input type="password" id="senha-cadastro" required />
+                </div>
+                <button id="btn-cadastrar">Cadastrar</button>
             </form>
             <p class="link-login">Já tem conta? <a href="#">Faça login</a></p>
         </div>
-
-        <!-- Botão alternar modo -->
-        <button class="modo-toggle">Alternar Modo</button>
-
    
     </section>
 
@@ -240,19 +238,11 @@
         </div>
     </section>
 
-
 </body>
-    <script src="js\script.js"></script>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <script src="js/scriptLogin.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/scriptPerfil.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="js/scriptPesquisa.js" defer></script>
 
-    <script src="js\scriptPerfil.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <script src="js\scriptPesquisa.js"></script>
-
-    <script src="js\scriptLogin.js"></script>
-
-
-
-    
 </html>

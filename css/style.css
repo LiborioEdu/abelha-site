@@ -23,8 +23,7 @@ html {
 body {
     color: var(--white-color);
     background: var(--bg-color);
-    font-family: Arial
-    
+    font-family: Arial;
 }
 
 
@@ -79,7 +78,7 @@ section {
 section.active {
     visibility: visible;
     opacity: 1;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .home {
@@ -280,14 +279,20 @@ section.active {
 }
 
 
+.perfil {
+    display: flex;
+    position: inherit;
+    top: 1px;
+    flex-flow: column;
+}
 
-
-
-
-/* Adicione isso ao seu arquivo style.css */
-
-/* Estilos para a seção perfil */
-
+.box-perfil {
+    position: absolute;
+    top:0;
+    height: 100%;
+    width:83%;
+    flex-wrap: nowrap;
+}
 
 .perfil h1 {
     font-size: 3.5rem;
@@ -375,7 +380,6 @@ section.active {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .perfil {
         padding: 10rem 4% 2rem;
@@ -402,36 +406,60 @@ section.active {
 
 
 
+.listaEspecies li {
+    font-size: 16px;
+}
 
-
-
+li {
+    list-style-type: none;
+}
 
 .pesquisa {
-    position: relative; /* Alterado de fixed para relative */
+    display: flex;
+    flex-flow: row wrap;
+    position: relative; 
     padding: 12rem 9% 2rem;
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
     min-height: calc(100vh - 8rem);
     display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente */
+    justify-content: center; 
+}
+
+.pesquisa .barra-lateral {
+    margin-right: 50px;
+    position: relative;
+    top: 80px;
+    left: 0px;
+    height: 100vh;
+    overflow-y: auto;
+    font-size: 20px;
+}
+
+.pesquisa ol li {
+    margin: 20px;
+    background: #ecd343;
+    color: #1f242d;
+    padding: 10px;
+    border-radius: 3px;
 }
 
 .pesquisa .container {
+    display: flex;
+    flex-flow: column wrap;
     background: var(--second-bg-color);
     border-radius: 1rem;
     padding: 3rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    position: relative; /* Adicionado para posicionamento do botão histórico */
-    min-height: 60vh; /* Altura mínima para melhor visualização */
 }
 
 .pesquisa .nav_box {
-    position: absolute; /* Posicionamento absoluto dentro do container */
+    position: relative;
+    align-items: center;
     bottom: 20px;
     right: 20px;
-    margin-bottom: 0; /* Removemos a margem inferior anterior */
+    margin-bottom: 0; 
 }
 
 .pesquisa .nav_box a, 
@@ -464,7 +492,7 @@ section.active {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 300px; /* Altura mínima garantida */
+    min-height: 300px; 
 }
 
 .pesquisa .droparea i {
@@ -505,14 +533,25 @@ section.active {
     box-shadow: 0 0 1rem var(--main-color);
 }
 
+@media (max-width: 1130px) {
+    .pesquisa .barra-lateral {
+        position: relative;
+        margin-left: -50px;
+        top:0;
+}
+
+    .pesquisa .container {
+        padding: 20%;
+    }
+}
 
 
 
 .especies {
-    padding: 12rem 9% 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    top: 0%;
+    position: initial;
     width: 100%;
+    margin-top: -600px;
 }
 
 .especies > div:first-child {
@@ -588,10 +627,8 @@ section.active {
     text-align: justify;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .especies {
-        padding: 10rem 4% 2rem;
     }
     
     .especies h1 {
@@ -636,13 +673,14 @@ section.active {
 
 
 .login {
+    top: 0px;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 10rem 9%;
     background-color: var(--bg-color);
-    position: relative;
 }
 
 .container-login, 

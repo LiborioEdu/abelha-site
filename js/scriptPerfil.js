@@ -1,8 +1,10 @@
-const baseURL = "https://api.jsonbin.io/v3/b/6833c0f28561e97a501b7f5b";
-const chave = "$2a$10$Lazw2g.tLVjtGNAD.G6Yc.chho5y9BPmmIOKVeiEKnOjely/HFZSW";
+
+
+const baseURL = BaseDeDados.getBaseUrl();
+const chave = BaseDeDados.getChave();
 
 let beeChart;
-
+    
 async function pegarDados() {
     try {
         const res = await fetch(`${baseURL}`, {
@@ -70,18 +72,18 @@ function atualizarDashboard(contador) {
                 label: 'Quantidade de Identificações',
                 data: Object.values(contador),
                 backgroundColor: '#FCBE5C',
-                borderColor: '#0B2429',
+                borderColor: '#FCBE5C',
                 borderWidth: 2
             }]
         },
         options: {
             responsive: true,
             plugins: {
-                legend: { labels: { color: '#0B2429' } }
+                legend: { labels: { color: '#FCBE5C' } }
             },
             scales: {
-                y: { beginAtZero: true, ticks: { color: '#0B2429' } },
-                x: { ticks: { color: '#0B2429' } }
+                y: { beginAtZero: true, ticks: { color: '#FCBE5C' } },
+                x: { ticks: { color: '#FCBE5C' } }
             }
         }
     });
@@ -97,5 +99,4 @@ async function iniciarDashboard() {
     }
 }
 
-// Inicia quando o DOM estiver carregado
 document.addEventListener('DOMContentLoaded', iniciarDashboard);
