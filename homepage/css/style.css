@@ -23,7 +23,12 @@ html {
 body {
     color: var(--white-color);
     background: var(--bg-color);
+    font-family: Arial
+    
 }
+
+
+
 
 header {
     position: fixed;
@@ -133,6 +138,11 @@ section.active {
     margin: 1rem 0 2.5rem;
 }
 
+.home-detail p span {
+  color: var(--main-color);
+  
+}
+
 .home-detail .btn-sci {
     display: flex;
     align-items: center;
@@ -204,6 +214,7 @@ section.active {
 
     #menu-icon{
         display: block;
+        cursor: pointer;
     }
 
     nav {
@@ -266,11 +277,275 @@ section.active {
     .btn-sci {
         justify-content: center;
     }
-
-
-
-
 }
+
+
+
+
+
+
+/* Adicione isso ao seu arquivo style.css */
+
+/* Estilos para a seção perfil */
+.perfil {
+    padding: 12rem 9% 2rem; /* aumente aqui para afastar da navbar */
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.perfil h1 {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    color: var(--main-color);
+    text-align: center;
+}
+
+.perfil h2 {
+    font-size: 2.8rem;
+    margin: 3rem 0 2rem;
+    color: var(--white-color);
+    text-align: center;
+}
+
+.perfil .card {
+    background: var(--second-bg-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.perfil .card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+}
+
+.perfil .card h3 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.perfil .card p {
+    font-size: 1.8rem;
+    color: var(--white-color);
+}
+
+/* Estilos para a tabela */
+.perfil table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: var(--second-bg-color);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.perfil table thead {
+    background-color: var(--main-color);
+}
+
+.perfil table th {
+    padding: 1.5rem;
+    text-align: left;
+    font-size: 1.8rem;
+    color: var(--bg-color);
+    font-weight: 600;
+}
+
+.perfil table td {
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--white-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.perfil table tr:last-child td {
+    border-bottom: none;
+}
+
+.perfil table tr:hover {
+    background-color: rgba(236, 211, 67, 0.1);
+}
+
+/* Estilos para o gráfico */
+.perfil #beeChart {
+    background: var(--second-bg-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .perfil {
+        padding: 10rem 4% 2rem;
+    }
+    
+    .perfil h1 {
+        font-size: 2.8rem;
+    }
+    
+    .perfil h2 {
+        font-size: 2.2rem;
+    }
+    
+    .perfil .card h3 {
+        font-size: 1.8rem;
+    }
+    
+    .perfil table th,
+    .perfil table td {
+        padding: 1rem;
+        font-size: 1.4rem;
+    }
+}
+
+
+
+
+
+
+
+.pesquisa {
+    position: relative; /* Alterado de fixed para relative */
+    padding: 12rem 9% 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    min-height: calc(100vh - 8rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+}
+
+.pesquisa .container {
+    background: var(--second-bg-color);
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    position: relative; /* Adicionado para posicionamento do botão histórico */
+    min-height: 60vh; /* Altura mínima para melhor visualização */
+}
+
+.pesquisa .nav_box {
+    position: absolute; /* Posicionamento absoluto dentro do container */
+    bottom: 20px;
+    right: 20px;
+    margin-bottom: 0; /* Removemos a margem inferior anterior */
+}
+
+.pesquisa .nav_box a, 
+.pesquisa .nav_box button {
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 4rem;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pesquisa .nav_box a:hover,
+.pesquisa .nav_box button:hover {
+    background: transparent;
+    color: var(--main-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.pesquisa .droparea {
+    border: 2px dashed var(--main-color);
+    border-radius: 1rem;
+    padding: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px; /* Altura mínima garantida */
+}
+
+.pesquisa .droparea i {
+    font-size: 5rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.pesquisa .droparea p {
+    font-size: 1.8rem;
+    color: var(--white-color);
+    margin-bottom: 0.5rem;
+}
+
+.pesquisa .droparea small {
+    font-size: 1.4rem;
+    color: var(--disabled-color);
+}
+
+.pesquisa .enviar-imagem {
+    display: block;
+    width: 100%;
+    padding: 1.5rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 4rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.pesquisa .enviar-imagem:hover {
+    background: transparent;
+    color: var(--main-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .pesquisa .nav_box {
+        position: static; /* Volta ao fluxo normal */
+        display: flex;
+        justify-content: flex-end; /* Alinha à direita */
+        margin-top: 2rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .pesquisa .nav_box button.historico {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.4rem;
+    }
+    
+    .pesquisa .container {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .pesquisa .nav_box button.historico {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1.3rem;
+    }
+    
+    .pesquisa .nav_box {
+        justify-content: center; /* Centraliza em telas muito pequenas */
+        padding-right: 0;
+    }
+}
+
+
 
 
 

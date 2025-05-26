@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css\style.css">
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    
 </head>
 <body>
     <header class="active">
@@ -34,7 +36,10 @@
                 <span style="--i:2" data-text="Canudo?">Canudo?</span>
                 <span style="--i:1" data-text="Tiuba?">Tiuba?</span>
             </h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tempore nesciunt numquam. Molestiae, incidunt harum id blanditiis nobis facilis sunt vel amet tenetur qui, itaque modi, asperiores aperiam ab eius.</p>
+            <p>Seja bem-vindo ao Identificador de <span>Abelhas Nativas Sem Ferrão do Piauí!</span> Aqui, você pode enviar uma foto e nosso sistema inteligente vai ajudar a reconhecer sua espécie.</p>
+            <p><span>1.</span> Tire uma foto da abelha.</p>
+            <p><span>2.</span> Envie aqui e aguarde a análise.</p>
+            <p><span>3.</span> Receba informações sobre a espécie e curiosidades!</p>
             <div class="btn-sci">
                 <a href="#" class="btn"><i class='bx bx-search-alt-2'></i> Pesquise aqui!</a>
             </div>
@@ -53,7 +58,36 @@
     </section>
 
     <section class="pesquisa">
-        <h2>teste pesquisa</h2>
+        <div class="barra-lateral">
+            <ol reversed></ol>
+        </div>
+        <div class="container">
+            <nav class="nav_box">
+                <button class="historico">HISTORICO</button>
+            </nav>
+
+            <main>
+            <div class="droparea">
+                <i class="far fa-images"></i>
+                <p>Arraste a imagem até aqui!</p>
+                <p><small>No maximo 20 imagens</small></p>
+
+                <ul class="nomes-imagens"></ul>
+            </div>
+            </main>
+
+            <button class="enviar-imagem">Enviar</button>
+
+            <ol class="listaEspecies"></ol>
+
+        </div>
+        
+
+
+
+
+
+
     </section>
 
     <section class="especies">
@@ -65,12 +99,42 @@
     </section>
 
     <section class="perfil">
-        <h2>teste perfil</h2>
+        <h2>Dashboard de Abelhas (IDs de 1 a 5)</h2>
+
+        <div class="card">
+            <h3>Espécie Mais Identificada</h3>
+            <p id="maisIdentificada">...</p>
+        </div>
+
+        <div class="card">
+            <h3>Quantidade</h3>
+            <p id="quantidadeMais">...</p>
+        </div>
+
+        <h2>Gráfico de Identificações</h2>
+        <canvas id="beeChart"></canvas>
+
+        <h2>Dados em Tabela</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Espécie</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaAbelhas"></tbody>
+        </table>
     </section>
+
 
 </body>
     <script src="js\script.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+    <script src="js\scriptPerfil.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
 
     
 </html>
