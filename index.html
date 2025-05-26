@@ -81,49 +81,163 @@
             <ol class="listaEspecies"></ol>
 
         </div>
-        
-
-
-
-
-
-
     </section>
 
     <section class="especies">
-        <h2>teste especies</h2>
+    <div>
+        <h1>Abelhas Nativas do Brasil</h1>
+        <p>Conheça cinco espécies importantes para o meio ambiente</p>
+    </div>
+
+    <div class="container">
+        <div class="caixa">
+            <div class="caixa-img">
+                <img src="img\tiuba.jpg" alt="Abelha Tínia">
+            </div>
+            <div class="caixa-content">
+                <h2>🐝 Tiúba</h2>
+                <p>
+                    A abelha Tiúba é uma espécie de abelha sem ferrão encontrada principalmente em regiões tropicais do Brasil.
+                    É conhecida por sua coloração escura e porte pequeno. Essas abelhas são muito tranquilas e vivem em colônias
+                    pequenas. São excelentes polinizadoras e têm um papel importante na manutenção da biodiversidade.
+                    Seu mel é escasso, mas muito valorizado por suas propriedades medicinais.
+                </p>
+            </div>
+        </div>
+
+        <div class="caixa">
+            <div class="caixa-img">
+                <img src="img\jandaira.webp" alt="Abelha Jandaíra">
+            </div>
+            <div class="caixa-content">
+                <h2>🐝 Jandaíra</h2>
+                <p>
+                    A Jandaíra (Melipona subnitida) é uma abelha sem ferrão típica do Nordeste do Brasil, especialmente do semiárido.
+                    É muito adaptada ao clima seco e consegue produzir mel mesmo em condições adversas. Sua coloração é clara,
+                    e o mel produzido por ela tem sabor suave e é altamente valorizado. As colônias vivem em ocos de árvores ou caixas.
+                </p>
+            </div>
+        </div>
+
+        <div class="caixa">
+            <div class="caixa-img">
+                <img src="img\jatai.jpg" alt="Abelha Jataí">
+            </div>
+            <div class="caixa-content">
+                <h2>🐝 Jataí</h2>
+                <p>
+                    A Jataí (Tetragonisca angustula) é uma das abelhas sem ferrão mais conhecidas no Brasil. Muito dócil,
+                    é ideal para criação em áreas urbanas. É facilmente reconhecida por sua coloração amarelada e pequeno tamanho.
+                    Produz um mel com sabor único, levemente cítrico, e de alto valor medicinal. Seus ninhos são feitos em paredes,
+                    troncos ou caixas próprias.
+                </p>
+            </div>
+        </div>
+
+        <div class="caixa">
+            <div class="caixa-img">
+                <img src="img\canudo.jpg" alt="Abelha Canudo">
+            </div>
+            <div class="caixa-content">
+                <h2>🐝 Canudo</h2>
+                <p>
+                    A abelha Canudo (Scaptotrigona sp.) recebe esse nome por causa da forma dos seus tubos de entrada no ninho.
+                    É uma espécie robusta, preta e também sem ferrão. Produz uma quantidade considerável de mel e própolis,
+                    ambos com alto valor terapêutico. Seus ninhos são geralmente encontrados em troncos ocos e são fáceis de manejar.
+                </p>
+            </div>
+        </div>
+
+        <div class="caixa">
+            <div class="caixa-img">
+                <img src="img\uruçu.webp" alt="Abelha Uruçu">
+            </div>
+            <div class="caixa-content">
+                <h2>🐝 Uruçu</h2>
+                <p>
+                    A Uruçu (Melipona scutellaris) é uma das maiores abelhas sem ferrão do Brasil. Muito valorizada no Nordeste,
+                    essa espécie produz um mel de sabor forte e aroma intenso, amplamente utilizado na medicina popular.
+                    É conhecida por sua docilidade e inteligência na construção dos ninhos, geralmente em ocos de árvores ou colmeias
+                    racionais. A Uruçu é excelente para a polinização e fundamental na preservação de florestas tropicais.
+                </p>
+            </div>
+        </div>
+        </div>
     </section>
 
     <section class="login">
-        <h2>teste login</h2>
+          <!-- Container Login -->
+    <div class="container-login">
+        <h2>Login</h2>
+        <form id="form-login">
+        <div class="campo">
+            <label for="email-login">E-mail:</label>
+            <input type="email" id="email-login" required />
+        </div>
+        <div class="campo">
+            <label for="senha-login">Senha:</label>
+            <input type="password" id="senha-login" required />
+        </div>
+        <button id="btn-login">Entrar</button>
+        </form>
+        <p class="link-cadastro">Não tem conta? <a href="#">Cadastre-se</a></p>
+    </div>
+
+    <!-- Container Cadastro -->
+        <div class="container-cadastro" style="display: none;">
+            <h2>Cadastro</h2>
+            <form id="form-cadastro">
+            <div class="campo">
+                <label for="nome-cadastro">Nome:</label>
+                <input type="text" id="nome-cadastro" required />
+            </div>
+            <div class="campo">
+                <label for="email-cadastro">E-mail:</label>
+                <input type="email" id="email-cadastro" required />
+            </div>
+            <div class="campo">
+                <label for="senha-cadastro">Senha:</label>
+                <input type="password" id="senha-cadastro" required />
+            </div>
+            <button id="btn-cadastrar">Cadastrar</button>
+            </form>
+            <p class="link-login">Já tem conta? <a href="#">Faça login</a></p>
+        </div>
+
+        <!-- Botão alternar modo -->
+        <button class="modo-toggle">Alternar Modo</button>
+
+   
     </section>
 
     <section class="perfil">
-        <h2>Dashboard de Abelhas (IDs de 1 a 5)</h2>
+        <div class="box-perfil">
+            <h2>Dashboard de Abelhas (IDs de 1 a 5)</h2>
 
-        <div class="card">
-            <h3>Espécie Mais Identificada</h3>
-            <p id="maisIdentificada">...</p>
+            <div class="card">
+                <h3>Espécie Mais Identificada</h3>
+                <p id="maisIdentificada">...</p>
+            </div>
+
+            <div class="card">
+                <h3>Quantidade</h3>
+                <p id="quantidadeMais">...</p>
+            </div>
+
+            <h2>Gráfico de Identificações</h2>
+            <canvas id="beeChart"></canvas>
+
+            <h2>Dados em Tabela</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Espécie</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaAbelhas"></tbody>
+            </table>
         </div>
-
-        <div class="card">
-            <h3>Quantidade</h3>
-            <p id="quantidadeMais">...</p>
-        </div>
-
-        <h2>Gráfico de Identificações</h2>
-        <canvas id="beeChart"></canvas>
-
-        <h2>Dados em Tabela</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Espécie</th>
-                    <th>Quantidade</th>
-                </tr>
-            </thead>
-            <tbody id="tabelaAbelhas"></tbody>
-        </table>
     </section>
 
 
@@ -133,6 +247,10 @@
 
     <script src="js\scriptPerfil.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js\scriptPesquisa.js"></script>
+
+    <script src="js\scriptLogin.js"></script>
 
 
 

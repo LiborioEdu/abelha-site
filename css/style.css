@@ -287,12 +287,7 @@ section.active {
 /* Adicione isso ao seu arquivo style.css */
 
 /* Estilos para a seção perfil */
-.perfil {
-    padding: 12rem 9% 2rem; /* aumente aqui para afastar da navbar */
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-content: center;
-}
+
 
 .perfil h1 {
     font-size: 3.5rem;
@@ -510,43 +505,274 @@ section.active {
     box-shadow: 0 0 1rem var(--main-color);
 }
 
+
+
+
+.especies {
+    padding: 12rem 9% 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.especies > div:first-child {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.especies h1 {
+    font-size: 3.5rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.especies p {
+    font-size: 1.8rem;
+    color: var(--white-color);
+}
+
+.especies .container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.especies .caixa {
+    background: var(--second-bg-color);
+    border-radius: 2rem;
+    padding: 3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.especies .caixa:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.5rem 1.5rem rgba(236, 211, 67, 0.3);
+}
+
+.especies .caixa-img {
+    flex: 0 0 250px;
+    height: 250px;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 3px solid var(--main-color);
+}
+
+.especies .caixa-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.especies .caixa:hover .caixa-img img {
+    transform: scale(1.05);
+}
+
+.especies .caixa-content {
+    flex: 1;
+}
+
+.especies .caixa h2 {
+    font-size: 2.4rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.especies .caixa p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
 /* Responsividade */
-@media (max-width: 992px) {
-    .pesquisa .nav_box {
-        position: static; /* Volta ao fluxo normal */
-        display: flex;
-        justify-content: flex-end; /* Alinha à direita */
-        margin-top: 2rem;
-        padding-right: 1rem;
+@media (max-width: 768px) {
+    .especies {
+        padding: 10rem 4% 2rem;
+    }
+    
+    .especies h1 {
+        font-size: 2.8rem;
+    }
+    
+    .especies .caixa {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+    }
+    
+    .especies .caixa-img {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 300px;
+        height: 200px;
+    }
+    
+    .especies .caixa h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .especies .caixa p {
+        font-size: 1.4rem;
     }
 }
 
-@media (max-width: 576px) {
-    .pesquisa .nav_box button.historico {
-        padding: 0.8rem 1.5rem;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10rem 9%;
+    background-color: var(--bg-color);
+    position: relative;
+}
+
+.container-login, 
+.container-cadastro {
+    background: var(--second-bg-color);
+    border-radius: 2rem;
+    padding: 4rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.login h2 {
+    font-size: 2.8rem;
+    color: var(--main-color);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.login .campo {
+    margin-bottom: 2rem;
+}
+
+.login label {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--white-color);
+    margin-bottom: 0.8rem;
+}
+
+.login input {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--white-color);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.8rem;
+    border: 0.2rem solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.login input:focus {
+    border-color: var(--main-color);
+    background: rgba(236, 211, 67, 0.1);
+}
+
+.login button {
+    width: 100%;
+    padding: 1.5rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 0.8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 1rem;
+}
+
+.login button:hover {
+    background: transparent;
+    color: var(--main-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.link-cadastro,
+.link-login {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+}
+
+.link-cadastro a,
+.link-login a {
+    color: var(--main-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.link-cadastro a:hover,
+.link-login a:hover {
+    text-decoration: underline;
+}
+
+.modo-toggle {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modo-toggle:hover {
+    background: transparent;
+    color: var(--main-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .login {
+        padding: 10rem 4% 2rem;
+    }
+    
+    .container-login, 
+    .container-cadastro {
+        padding: 3rem;
+    }
+    
+    .login h2 {
+        font-size: 2.4rem;
+    }
+    
+    .login input,
+    .login button {
+        padding: 1.2rem;
         font-size: 1.4rem;
     }
     
-    .pesquisa .container {
-        padding: 2rem;
+    .modo-toggle {
+        top: 1rem;
+        right: 1rem;
+        padding: 0.8rem 1.5rem;
     }
 }
-
-@media (max-width: 400px) {
-    .pesquisa .nav_box button.historico {
-        width: 100%;
-        padding: 0.8rem;
-        font-size: 1.3rem;
-    }
-    
-    .pesquisa .nav_box {
-        justify-content: center; /* Centraliza em telas muito pequenas */
-        padding-right: 0;
-    }
-}
-
-
-
-
-
-
