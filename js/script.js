@@ -3,6 +3,7 @@ const logoLink = document.querySelector('.logo');
 const sections = document.querySelectorAll('section');
 const menuIcon = document.getElementById('menu-icon');
 const navbar = document.querySelector('header nav');
+const pesqLink = document.querySelector('.btn-sci')
 
 const activePage = () => {
     navLinks.forEach(link => {
@@ -51,6 +52,13 @@ navLinks.forEach(link => {
         menuIcon.classList.remove('bx-x');
     });
 });
+
+pesqLink.addEventListener('click', () => {
+    sections[0].classList.remove('active');
+    sections[1].classList.add('active');
+    navLinks[0].classList.remove('active')
+    navLinks[1].classList.add('active')
+} )
 
 
 
